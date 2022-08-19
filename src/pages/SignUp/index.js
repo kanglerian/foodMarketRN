@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import { Button, Gap, Header, TextInput } from '../../components'
 import React from 'react'
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
     return (
         <View style={styles.page}>
             <Header title="Sign Up" subTitle="Register and eat" onBack={() => { }} />
@@ -21,7 +21,7 @@ const SignUp = () => {
                     <Gap height={16} />
                     <TextInput label="Password" placeholder="Type your password.." />
                     <Gap height={24} />
-                    <Button text="Continue" />
+                    <Button text="Continue" onPres={() => navigation.navigate('SignUpAddress')} />
                 </View>
             </ScrollView>
         </View>
